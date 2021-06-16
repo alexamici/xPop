@@ -33,7 +33,6 @@ def read_istat_deaths(path):
     data = None
 
     for yy in range(11, 21):
-        print(yy)
         tmp = istat.groupby(["month_day", "age", "location"]).agg(
             **{
                 "f": (f"F_{yy}", sum),
